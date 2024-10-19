@@ -80,7 +80,7 @@ var numNodes = 10;
 var numAngles = 11;
 var angle = 0;
 // 125
-var theta = [40, -10, 125, 80, -90, 90, 90, -55, -90, -30, 0];
+var theta = [40, -10, 90, 80, -90, 90, 90, -55, -90, -30, 0];
 
 var numVertices = 24;
 
@@ -543,16 +543,16 @@ var render = function () {
   );
   mv = mult(mv, rotateX(spinX));
   mv = mult(mv, rotateY(spinY));
-  theta[2] = theta[2] < 270 ? theta[2] + 5 : 270;
+  theta[2] = theta[2] < 270 ? theta[2] + 5 : 90;
   document.getElementById('currAngle').innerHTML = theta[2];
   initNodes(2);
-  theta[4] = theta[4] > -270 ? theta[4] - 5 : -270;
+  theta[4] = theta[4] > -270 ? theta[4] - 5 : -90;
   document.getElementById('currAngle').innerHTML = theta[4];
   initNodes(4);
-  theta[6] = theta[6] > -90.0 ? theta[6] - 5 : -90;
+  theta[6] = theta[6] > -90.0 ? theta[6] - 5 : 90;
   document.getElementById('currAngle').innerHTML = theta[6];
   initNodes(6);
-  theta[8] = theta[8] < 90.0 ? theta[8] + 5 : 90;
+  theta[8] = theta[8] < 90.0 ? theta[8] + 5 : -90;
   document.getElementById('currAngle').innerHTML = theta[8];
   initNodes(8);
 
